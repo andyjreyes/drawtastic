@@ -36,6 +36,7 @@
 		A15314891B00C48E00ABE1B2 /* DrawtasticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawtasticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153148E1B00C48E00ABE1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A153148F1B00C48E00ABE1B2 /* DrawtasticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawtasticTests.swift; sourceTree = "<group>"; };
+		A15314991B00C87700ABE1B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				A15314781B00C48E00ABE1B2 /* Info.plist */,
+				A15314991B00C87700ABE1B2 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
