@@ -1,0 +1,6 @@
+framework module Pods_Drawtastic {
+  umbrella header "Pods-Drawtastic-umbrella.h"
+
+  export *
+  module * { export * }
+}
