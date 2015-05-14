@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EFEF9445054462977D0BC62 /* Pods_Drawtastic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F3DBC957BE74AA7C55966B /* Pods_Drawtastic.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A153147A1B00C48E00ABE1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15314791B00C48E00ABE1B2 /* AppDelegate.swift */; };
 		A153147C1B00C48E00ABE1B2 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */; };
 		A153147F1B00C48E00ABE1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A153147D1B00C48E00ABE1B2 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		096A6534480558F8B09AA58D /* Pods-Drawtastic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drawtastic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Drawtastic/Pods-Drawtastic.debug.xcconfig"; sourceTree = "<group>"; };
 		A15314741B00C48D00ABE1B2 /* Drawtastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawtastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15314781B00C48E00ABE1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15314791B00C48E00ABE1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +43,9 @@
 		A153149A1B00D39C00ABE1B2 /* Drawtastic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drawtastic-Bridging-Header.h"; sourceTree = "<group>"; };
 		A15314A11B049D6C00ABE1B2 /* JCDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDrawView.h; sourceTree = "<group>"; };
 		A15314A21B049D6C00ABE1B2 /* JCDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDrawView.m; sourceTree = "<group>"; };
-		A15314A41B049EB600ABE1B2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		A16F6E461B04BC1F009B4228 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
+		A6F3DBC957BE74AA7C55966B /* Pods_Drawtastic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drawtastic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F67724F217A1254AFDE309C7 /* Pods-Drawtastic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drawtastic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Drawtastic/Pods-Drawtastic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFEF9445054462977D0BC62 /* Pods_Drawtastic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83E18DE42F3B6F5E88A37E4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6F3DBC957BE74AA7C55966B /* Pods_Drawtastic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A153146B1B00C48D00ABE1B2 = {
 			isa = PBXGroup;
 			children = (
 				A15314761B00C48E00ABE1B2 /* Drawtastic */,
 				A153148C1B00C48E00ABE1B2 /* DrawtasticTests */,
 				A15314751B00C48E00ABE1B2 /* Products */,
+				E61F52DC6E310846586ED7C5 /* Pods */,
+				83E18DE42F3B6F5E88A37E4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +115,7 @@
 			children = (
 				A15314781B00C48E00ABE1B2 /* Info.plist */,
 				A15314991B00C87700ABE1B2 /* README.md */,
-				A15314A41B049EB600ABE1B2 /* LICENSE.txt */,
+				A16F6E461B04BC1F009B4228 /* LICENSE.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,6 +146,15 @@
 			name = "Drawing View";
 			sourceTree = "<group>";
 		};
+		E61F52DC6E310846586ED7C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				096A6534480558F8B09AA58D /* Pods-Drawtastic.debug.xcconfig */,
+				F67724F217A1254AFDE309C7 /* Pods-Drawtastic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A15314931B00C48E00ABE1B2 /* Build configuration list for PBXNativeTarget "Drawtastic" */;
 			buildPhases = (
+				1FC384243D6836F65089FE24 /* Check Pods Manifest.lock */,
 				A15314701B00C48D00ABE1B2 /* Sources */,
 				A15314711B00C48D00ABE1B2 /* Frameworks */,
 				A15314721B00C48D00ABE1B2 /* Resources */,
+				C899DCAC5867FB1879D130B4 /* Embed Pods Frameworks */,
+				47D12F98AE3B5509437BB818 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +252,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FC384243D6836F65089FE24 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		47D12F98AE3B5509437BB818 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Drawtastic/Pods-Drawtastic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C899DCAC5867FB1879D130B4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Drawtastic/Pods-Drawtastic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A15314701B00C48D00ABE1B2 /* Sources */ = {
@@ -360,12 +435,13 @@
 		};
 		A15314941B00C48E00ABE1B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 096A6534480558F8B09AA58D /* Pods-Drawtastic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Drawtastic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Drawtastic/Drawtastic-Bridging-Header.h";
@@ -375,12 +451,13 @@
 		};
 		A15314951B00C48E00ABE1B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F67724F217A1254AFDE309C7 /* Pods-Drawtastic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Drawtastic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Drawtastic/Drawtastic-Bridging-Header.h";
@@ -440,6 +517,7 @@
 				A15314951B00C48E00ABE1B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A15314961B00C48E00ABE1B2 /* Build configuration list for PBXNativeTarget "DrawtasticTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +526,7 @@
 				A15314981B00C48E00ABE1B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
