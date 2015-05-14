@@ -5,6 +5,8 @@
 //  Created by César Manuel Pinto Castillo on 2/17/12.
 //  Copyright (c) 2012 AveCesar. All rights reserved.
 //
+//  Modified by Andy Reyes on 5/14/2015.
+//  Copyright (c) 2012 AveCesar. All rights reserved.
 
 #import "JCDrawView.h"
 
@@ -22,6 +24,17 @@
 @synthesize drawImageView;
 @synthesize lineWidth;
 @synthesize currentColor;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.lastPoint = CGPointZero;
+        self.prePreviousPoint = CGPointZero;
+        self.lineWidth = 1.0;
+    }
+    return self;
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A153147A1B00C48E00ABE1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15314791B00C48E00ABE1B2 /* AppDelegate.swift */; };
-		A153147C1B00C48E00ABE1B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153147B1B00C48E00ABE1B2 /* ViewController.swift */; };
+		A153147C1B00C48E00ABE1B2 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */; };
 		A153147F1B00C48E00ABE1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A153147D1B00C48E00ABE1B2 /* Main.storyboard */; };
 		A15314811B00C48E00ABE1B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15314801B00C48E00ABE1B2 /* Images.xcassets */; };
 		A15314841B00C48E00ABE1B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15314821B00C48E00ABE1B2 /* LaunchScreen.xib */; };
@@ -30,7 +30,7 @@
 		A15314741B00C48D00ABE1B2 /* Drawtastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawtastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15314781B00C48E00ABE1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15314791B00C48E00ABE1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A153147B1B00C48E00ABE1B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		A153147E1B00C48E00ABE1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A15314801B00C48E00ABE1B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A15314831B00C48E00ABE1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			children = (
 				A15314A01B049D2700ABE1B2 /* Drawing View */,
 				A15314791B00C48E00ABE1B2 /* AppDelegate.swift */,
-				A153147B1B00C48E00ABE1B2 /* ViewController.swift */,
+				A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */,
 				A153147D1B00C48E00ABE1B2 /* Main.storyboard */,
 				A15314801B00C48E00ABE1B2 /* Images.xcassets */,
 				A15314821B00C48E00ABE1B2 /* LaunchScreen.xib */,
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A153147C1B00C48E00ABE1B2 /* ViewController.swift in Sources */,
+				A153147C1B00C48E00ABE1B2 /* DrawingViewController.swift in Sources */,
 				A15314A31B049D6C00ABE1B2 /* JCDrawView.m in Sources */,
 				A153147A1B00C48E00ABE1B2 /* AppDelegate.swift in Sources */,
 			);
@@ -365,7 +365,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Drawtastic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Drawtastic/Drawtastic-Bridging-Header.h";
@@ -380,7 +380,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Drawtastic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Drawtastic/Drawtastic-Bridging-Header.h";

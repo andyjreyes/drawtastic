@@ -21,10 +21,11 @@
             </objects>
             <point key="canvasLocation" x="-56" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--Draw!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Drawtastic" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="DrawingViewController" customModule="Drawtastic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,13 +33,26 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="JCDrawView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L0r-G1-IIR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="L0r-G1-IIR" secondAttribute="trailing" id="Sdh-p7-Jox"/>
+                            <constraint firstItem="L0r-G1-IIR" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TMs-cb-88P"/>
+                            <constraint firstItem="L0r-G1-IIR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cz2-An-5cb"/>
+                            <constraint firstItem="L0r-G1-IIR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vk5-II-fxT"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="drawImageView" destination="L0r-G1-IIR" id="QeW-M4-U5C"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="ewg-Ml-peT"/>
+                    <navigationItem key="navigationItem" title="Draw!" id="ewg-Ml-peT"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="25"/>
+            <point key="canvasLocation" x="743" y="-19"/>
         </scene>
     </scenes>
 </document>
