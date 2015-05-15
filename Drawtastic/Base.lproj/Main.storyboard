@@ -24,7 +24,7 @@
         <scene sceneID="bwH-Ub-1kf">
             <objects>
                 <tableViewController title="Menu" id="5ew-uT-Te1" customClass="MenuViewController" customModule="Drawtastic" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gnx-CN-pQK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gnx-CN-pQK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,9 +34,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Jp-Qt-1QW" id="i96-FR-svH">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abU-m9-rkQ">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Player Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abU-m9-rkQ">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -50,7 +50,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Available Players" id="ulw-OV-cju">
-                        <barButtonItem key="rightBarButtonItem" title="Everyone's Here!" id="KTg-M1-Kwd">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Everyone's Here!" id="KTg-M1-Kwd">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="XOF-Tk-zAJ"/>
                             </connections>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="25"/>
+            <point key="canvasLocation" x="738" y="25"/>
         </scene>
         <!--Describe-->
         <scene sceneID="gAO-os-mKO">
