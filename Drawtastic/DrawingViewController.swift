@@ -10,12 +10,16 @@ import UIKit
 
 class DrawingViewController: UIViewController {
     
-    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //self.navigationItem.hidesBackButton = true;
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        resetDrawView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +29,21 @@ class DrawingViewController: UIViewController {
     
     @IBAction func unwindToDrawingViewController(sender: UIStoryboardSegue)
     {
+        println("unwindToDrawingViewController just got called")
         let sourceViewController: AnyObject = sender.sourceViewController
         // Pull any data from the view controller which initiated the unwind segue.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+    }
+    
+    private func resetDrawView() {
+        println("We are resetting the Draw View")
+        activityIndicator.hidden = true
+    }
 
-
+    
 }
 

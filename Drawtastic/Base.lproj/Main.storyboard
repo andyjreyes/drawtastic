@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZnU-M8-YEd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -13,12 +14,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5ew-uT-Te1" kind="relationship" relationship="rootViewController" id="aIc-Yc-PQw"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lZk-3O-vki"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc9-qW-39n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-656" y="25"/>
+            <point key="canvasLocation" x="738" y="-1039"/>
         </scene>
         <!--Menu-->
         <scene sceneID="bwH-Ub-1kf">
@@ -28,8 +29,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Player Cell" textLabel="abU-m9-rkQ" style="IBUITableViewCellStyleDefault" id="2Jp-Qt-1QW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="Player Cell" textLabel="abU-m9-rkQ" style="IBUITableViewCellStyleDefault" id="2Jp-Qt-1QW">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Jp-Qt-1QW" id="i96-FR-svH">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -82,12 +84,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L0r-G1-IIR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-Hi-lp9">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uaX-Hi-lp9" firstAttribute="centerX" secondItem="L0r-G1-IIR" secondAttribute="centerX" id="Qvx-oS-fAr"/>
                             <constraint firstAttribute="trailing" secondItem="L0r-G1-IIR" secondAttribute="trailing" id="Sdh-p7-Jox"/>
                             <constraint firstItem="L0r-G1-IIR" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TMs-cb-88P"/>
                             <constraint firstItem="L0r-G1-IIR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cz2-An-5cb"/>
+                            <constraint firstItem="uaX-Hi-lp9" firstAttribute="centerY" secondItem="L0r-G1-IIR" secondAttribute="centerY" id="rvO-2C-Kcf"/>
                             <constraint firstItem="L0r-G1-IIR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vk5-II-fxT"/>
                         </constraints>
                         <connections>
@@ -101,6 +109,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="uaX-Hi-lp9" id="vhF-AI-ugK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,30 +129,35 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" text="Describe what you see here" translatesAutoresizingMaskIntoConstraints="NO" id="ne8-kq-o42">
-                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="dVv-q1-n6m"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe the drawing" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-NU-RGO">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-18-c1u">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ne8-kq-o42" firstAttribute="leading" secondItem="dIJ-1O-4J8" secondAttribute="leading" id="mBt-Yb-G43"/>
-                            <constraint firstItem="ne8-kq-o42" firstAttribute="bottom" secondItem="kbz-yR-S5g" secondAttribute="top" id="o0n-CL-PSO"/>
-                            <constraint firstAttribute="trailing" secondItem="ne8-kq-o42" secondAttribute="trailing" id="rYB-77-rYS"/>
+                            <constraint firstItem="ihp-NU-RGO" firstAttribute="leading" secondItem="dIJ-1O-4J8" secondAttribute="leadingMargin" id="F6m-PF-9Om"/>
+                            <constraint firstItem="ihp-NU-RGO" firstAttribute="top" secondItem="kYe-NR-rtZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Fzd-dc-CCL"/>
+                            <constraint firstItem="ihp-NU-RGO" firstAttribute="trailing" secondItem="dIJ-1O-4J8" secondAttribute="trailingMargin" id="fdN-MU-9Qr"/>
+                            <constraint firstItem="2VO-18-c1u" firstAttribute="centerY" secondItem="dIJ-1O-4J8" secondAttribute="centerY" id="i3y-dv-vcf"/>
+                            <constraint firstItem="2VO-18-c1u" firstAttribute="centerX" secondItem="ihp-NU-RGO" secondAttribute="centerX" id="og1-yT-6Pv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Describe" id="fPw-e5-P50">
                         <barButtonItem key="rightBarButtonItem" title="Finished" id="mf1-HV-9en">
                             <connections>
-                                <segue destination="QK1-C7-nAN" kind="unwind" unwindAction="unwindToDrawingViewController:" id="Su3-ED-8rK"/>
+                                <segue destination="QK1-C7-nAN" kind="unwind" unwindAction="unwindToDrawingViewController:" id="H9X-W7-X5G"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2VO-18-c1u" id="bt8-WO-6dt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZx-ON-6xW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QK1-C7-nAN" userLabel="Exit" sceneMemberID="exit"/>
@@ -149,4 +165,7 @@
             <point key="canvasLocation" x="1666" y="25"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lZk-3O-vki"/>
+    </inferredMetricsTieBreakers>
 </document>
