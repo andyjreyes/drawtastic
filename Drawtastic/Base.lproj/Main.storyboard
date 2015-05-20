@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZnU-M8-YEd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Reh-YE-QVq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -52,9 +52,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Available Players" id="ulw-OV-cju">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Everyone's Here!" id="KTg-M1-Kwd">
+                        <barButtonItem key="rightBarButtonItem" title="Everyone's Here!" id="KTg-M1-Kwd">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="XOF-Tk-zAJ"/>
+                                <action selector="startGame:" destination="5ew-uT-Te1" id="ai4-ZX-gBB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -64,10 +64,13 @@
                             <action selector="refresh:" destination="5ew-uT-Te1" eventType="valueChanged" id="WGI-Ss-oWn"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="PlayerListToDrawSegue" id="2xn-3z-J2v"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBx-2D-x5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="25"/>
+            <point key="canvasLocation" x="55" y="25"/>
         </scene>
         <!--Draw-->
         <scene sceneID="tne-QT-ifu">
@@ -105,7 +108,7 @@
                     <navigationItem key="navigationItem" title="Draw" id="ewg-Ml-peT">
                         <barButtonItem key="rightBarButtonItem" title="Finished!" id="NR3-4p-Bye">
                             <connections>
-                                <segue destination="lJe-Dt-eQ0" kind="show" id="Doc-Wv-EBs"/>
+                                <segue destination="lJe-Dt-eQ0" kind="show" identifier="DrawToDescribeSegue" id="Doc-Wv-EBs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -164,8 +167,24 @@
             </objects>
             <point key="canvasLocation" x="1666" y="25"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uaF-lY-JA5">
+            <objects>
+                <navigationController id="Reh-YE-QVq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ut-A2-QK7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5ew-uT-Te1" kind="relationship" relationship="rootViewController" id="mDU-iG-oWA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3a-U8-aNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-670" y="25"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lZk-3O-vki"/>
+        <segue reference="2xn-3z-J2v"/>
     </inferredMetricsTieBreakers>
 </document>

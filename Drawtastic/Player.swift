@@ -9,6 +9,8 @@
 import Foundation
 import MultipeerConnectivity
 
+private let myName = UIDevice.currentDevice().name
+
 struct Player
 {
     let name: String
@@ -21,6 +23,10 @@ struct Player
     
     init(peerID: MCPeerID) {
         name = peerID.displayName
+    }
+    
+    static func getMe() -> Player {
+        return Player(name: myName)
     }
     
 }

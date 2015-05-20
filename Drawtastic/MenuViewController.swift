@@ -24,9 +24,22 @@ class MenuViewController: UITableViewController {
         MPCManager.onConnect { _ in
             self.updatePlayers()
         }
+        
         MPCManager.onDisconnect { _ in
             self.updatePlayers()
         }
+        
+        MPCManager.onEvent(.StartGame, run: { (_, object) -> Void in
+            self.performSegueWithIdentifier("PlayerListToDrawSegue", sender: nil)
+        })
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        MPCManager.onConnect(nil)
+        MPCManager.onDisconnect(nil)
+        MPCManager.onEvent(.StartGame, run: nil)
+        
+        super.viewWillDisappear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +50,16 @@ class MenuViewController: UITableViewController {
     private func updatePlayers() {
         navigationItem.rightBarButtonItem?.enabled = (MPCManager.otherPlayers.count > 0)
         tableView.reloadData()
+    }
+    
+    // MARK: User Actions
+    
+    // When someone hits the "Everyone's Here" button,
+    // ALL players segue and start the game!
+    @IBAction func startGame(sender: UIBarButtonItem) {
+        println("This got hit!")
+        MPCManager.sendEvent(Event.StartGame)
+        self.performSegueWithIdentifier("PlayerListToDrawSegue", sender: nil)
     }
 
 

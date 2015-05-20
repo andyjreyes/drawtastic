@@ -19,6 +19,8 @@ class DescribingViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         resetDescribeView()
     }
     
