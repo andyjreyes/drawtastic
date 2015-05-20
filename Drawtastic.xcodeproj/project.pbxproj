@@ -19,6 +19,7 @@
 		A16F6E4E1B04C962009B4228 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F6E4D1B04C962009B4228 /* MenuViewController.swift */; };
 		A16F6E521B04E04B009B4228 /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F6E511B04E04B009B4228 /* MPCManager.swift */; };
 		A16F6E541B04E1B9009B4228 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F6E531B04E1B9009B4228 /* Player.swift */; };
+		A1D476EB1B0CB57000BAA01A /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D476EA1B0CB57000BAA01A /* UIView+Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A16F6E4D1B04C962009B4228 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A16F6E511B04E04B009B4228 /* MPCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
 		A16F6E531B04E1B9009B4228 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A1D476EA1B0CB57000BAA01A /* UIView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
 		A6F3DBC957BE74AA7C55966B /* Pods_Drawtastic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drawtastic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67724F217A1254AFDE309C7 /* Pods-Drawtastic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drawtastic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Drawtastic/Pods-Drawtastic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +108,6 @@
 		A15314761B00C48E00ABE1B2 /* Drawtastic */ = {
 			isa = PBXGroup;
 			children = (
-				A15314A01B049D2700ABE1B2 /* Drawing View */,
 				A16F6E4D1B04C962009B4228 /* MenuViewController.swift */,
 				A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */,
 				A16F6E471B04C2CF009B4228 /* DescribingViewController.swift */,
@@ -124,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				A15314791B00C48E00ABE1B2 /* AppDelegate.swift */,
+				A15314A01B049D2700ABE1B2 /* Drawing View */,
+				A1D476EC1B0CCA4900BAA01A /* Extensions */,
 				A153149A1B00D39C00ABE1B2 /* Drawtastic-Bridging-Header.h */,
 				A15314781B00C48E00ABE1B2 /* Info.plist */,
 				A15314991B00C87700ABE1B2 /* README.md */,
@@ -156,6 +159,14 @@
 				A15314A21B049D6C00ABE1B2 /* JCDrawView.m */,
 			);
 			name = "Drawing View";
+			sourceTree = "<group>";
+		};
+		A1D476EC1B0CCA4900BAA01A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1D476EA1B0CB57000BAA01A /* UIView+Image.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		E61F52DC6E310846586ED7C5 /* Pods */ = {
@@ -322,6 +333,7 @@
 				A16F6E4E1B04C962009B4228 /* MenuViewController.swift in Sources */,
 				A16F6E521B04E04B009B4228 /* MPCManager.swift in Sources */,
 				A15314A31B049D6C00ABE1B2 /* JCDrawView.m in Sources */,
+				A1D476EB1B0CB57000BAA01A /* UIView+Image.swift in Sources */,
 				A16F6E541B04E1B9009B4228 /* Player.swift in Sources */,
 				A16F6E481B04C2CF009B4228 /* DescribingViewController.swift in Sources */,
 				A153147A1B00C48E00ABE1B2 /* AppDelegate.swift in Sources */,

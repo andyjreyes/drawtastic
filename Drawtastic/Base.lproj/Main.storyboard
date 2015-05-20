@@ -5,22 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="7Ty-pR-uAh">
-            <objects>
-                <navigationController id="ZnU-M8-YEd" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Hu-Ae-Vnc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lZk-3O-vki"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sc9-qW-39n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="738" y="-1039"/>
-        </scene>
         <!--Menu-->
         <scene sceneID="bwH-Ub-1kf">
             <objects>
@@ -184,7 +168,4 @@
             <point key="canvasLocation" x="-670" y="25"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="2xn-3z-J2v"/>
-    </inferredMetricsTieBreakers>
 </document>

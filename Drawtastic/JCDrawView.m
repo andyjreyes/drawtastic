@@ -137,4 +137,8 @@
     return [self.drawImageView image];
 }
 
+- (void)resetImage {
+    self.drawImageView.image = [[UIImage alloc] init];
+}
+
 @end

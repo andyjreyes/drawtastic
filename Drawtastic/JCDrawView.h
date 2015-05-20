@@ -5,6 +5,8 @@
 //  Created by César Manuel Pinto Castillo on 2/17/12.
 //  Copyright (c) 2012 AveCesar. All rights reserved.
 //
+//  Modified by Andy Reyes on 5/14/2015.
+//  Copyright (c) 2012 AveCesar. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
@@ -20,5 +22,6 @@
 @property (nonatomic) CGFloat lineWidth;
 
 - (UIImage *)image;
+- (void) resetImage;
 
 @end
