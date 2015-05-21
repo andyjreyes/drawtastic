@@ -30,7 +30,7 @@ public var eventBlocks = [String: ObjectBlock]()
 
 #if os(iOS)
 import UIKit
-public let myName = UIDevice.currentDevice().name
+public let myName = UIDevice.currentDevice().name + " \(arc4random_uniform(10_000))" //TODO: Remove this hack!
 #else
 public let myName = NSHost.currentHost().localizedName ?? ""
 #endif
