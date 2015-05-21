@@ -20,6 +20,7 @@ enum Event: String {
     TimesUp = "TimesUp",
     FinishedDrawing = "FinishedDrawing",
     FinishedDescribing = "FinishedDescribing",
+    ReceivedNextItem = "ReceivedNextItem",
     EndGame = "EndGame"
 }
 
@@ -32,10 +33,38 @@ struct MPCManager {
     }
     
     static var otherPlayers: [Player] {
-        return peers.map { Player(peerID: $0) }
+        var playerArray: [Player] = peers.map { Player(peerID: $0) }
+        playerArray.sort({$0.name < $1.name})
+        return playerArray
     }
     
-    static var allPlayers: [Player] { return [Player.getMe()] + otherPlayers }
+    static var allPlayers: [Player] {
+        var playerArray: [Player] = [Player.getMe()] + otherPlayers
+        playerArray.sort({$0.name < $1.name})
+        return playerArray
+    }
+    
+    static var nextRecipient: Player {
+        // If you are last in line, your nextRecipient is first in line
+        if allPlayers.last!.name == Player.getMe().name
+        {
+            return allPlayers.first!
+        }
+        
+        // Find the next person in line after you
+        for (var i = 0; i < allPlayers.count; i++)
+        {
+            if allPlayers[i].name == Player.getMe().name
+            {
+                // Don't worry, we can't go off the array here
+                return allPlayers[i+1]
+            }
+        }
+        
+        // Should never reach here
+        println("We couldn't find the nextRecipient? Impossible!")
+        return allPlayers.first!
+    }
     
     // MARK: Start
     

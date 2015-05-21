@@ -1,17 +1,17 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  Drawtastic
 //
-//  Created by Andy Reyes on 5/11/15.
+//  Created by Andy Reyes on 5/21/15.
 //  Copyright (c) 2015 Andy Reyes. All rights reserved.
 //
 
 import UIKit
 
-class DrawingViewController: UIViewController {
+class GameViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
-
+    @IBOutlet weak var descriptionText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +23,7 @@ class DrawingViewController: UIViewController {
         
         resetDrawView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,10 +41,10 @@ class DrawingViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         // Test code for stiting image representations of views together. It works!
-//        let myTextView: UITextView = UITextView(frame: CGRectMake(0, 0, 200, 50))
-//        myTextView.text = "This is how we do it! Shalalalala!"
-//        UIImageWriteToSavedPhotosAlbum(self.view.image, nil, nil, nil)
-//        UIImageWriteToSavedPhotosAlbum(UIView.joinImages([myTextView.image, self.view.image, myTextView.image, self.view.image, myTextView.image, self.view.image]), nil, nil, nil)
+        //        let myTextView: UITextView = UITextView(frame: CGRectMake(0, 0, 200, 50))
+        //        myTextView.text = "This is how we do it! Shalalalala!"
+        //        UIImageWriteToSavedPhotosAlbum(self.view.image, nil, nil, nil)
+        //        UIImageWriteToSavedPhotosAlbum(UIView.joinImages([myTextView.image, self.view.image, myTextView.image, self.view.image, myTextView.image, self.view.image]), nil, nil, nil)
         
         println(MPCManager.allPlayers.map({return $0.name}))
     }
@@ -52,7 +52,7 @@ class DrawingViewController: UIViewController {
     private func resetDrawView() {
         println("We are resetting the Draw View")
         
-        activityIndicator.hidden = true
+        //activityIndicator.hidden = true
         
         // Remove the previously drawn image
         if let drawView = self.view as? JCDrawView {
@@ -60,7 +60,11 @@ class DrawingViewController: UIViewController {
         }
         
     }
-
     
-}
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        textField.resignFirstResponder()
+        return true
+    }
 
+}

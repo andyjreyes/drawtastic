@@ -8,8 +8,9 @@
 
 import Foundation
 import MultipeerConnectivity
+import PeerKit
 
-private let myName = UIDevice.currentDevice().name
+private let myName = PeerKit.myName
 
 struct Player
 {

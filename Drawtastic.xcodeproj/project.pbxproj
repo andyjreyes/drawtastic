@@ -20,6 +20,7 @@
 		A16F6E521B04E04B009B4228 /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F6E511B04E04B009B4228 /* MPCManager.swift */; };
 		A16F6E541B04E1B9009B4228 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F6E531B04E1B9009B4228 /* Player.swift */; };
 		A1D476EB1B0CB57000BAA01A /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D476EA1B0CB57000BAA01A /* UIView+Image.swift */; };
+		A1D887BD1B0E15F8000E4C6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D887BC1B0E15F8000E4C6F /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		A16F6E511B04E04B009B4228 /* MPCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
 		A16F6E531B04E1B9009B4228 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A1D476EA1B0CB57000BAA01A /* UIView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
+		A1D887BC1B0E15F8000E4C6F /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A6F3DBC957BE74AA7C55966B /* Pods_Drawtastic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drawtastic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67724F217A1254AFDE309C7 /* Pods-Drawtastic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drawtastic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Drawtastic/Pods-Drawtastic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 			children = (
 				A16F6E4D1B04C962009B4228 /* MenuViewController.swift */,
 				A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */,
+				A1D887BC1B0E15F8000E4C6F /* GameViewController.swift */,
 				A16F6E471B04C2CF009B4228 /* DescribingViewController.swift */,
 				A16F6E531B04E1B9009B4228 /* Player.swift */,
 				A16F6E511B04E04B009B4228 /* MPCManager.swift */,
@@ -333,6 +336,7 @@
 				A16F6E4E1B04C962009B4228 /* MenuViewController.swift in Sources */,
 				A16F6E521B04E04B009B4228 /* MPCManager.swift in Sources */,
 				A15314A31B049D6C00ABE1B2 /* JCDrawView.m in Sources */,
+				A1D887BD1B0E15F8000E4C6F /* GameViewController.swift in Sources */,
 				A1D476EB1B0CB57000BAA01A /* UIView+Image.swift in Sources */,
 				A16F6E541B04E1B9009B4228 /* Player.swift in Sources */,
 				A16F6E481B04C2CF009B4228 /* DescribingViewController.swift in Sources */,
