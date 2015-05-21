@@ -12,6 +12,8 @@ class DescribingViewController: UIViewController {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var describedImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

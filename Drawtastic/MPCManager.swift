@@ -24,6 +24,8 @@ enum Event: String {
     EndGame = "EndGame"
 }
 
+var data: [String : [UIImage]] = [String : [UIImage]]()
+
 struct MPCManager {
     
     // MARK: Properties

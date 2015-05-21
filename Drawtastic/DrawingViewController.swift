@@ -47,6 +47,15 @@ class DrawingViewController: UIViewController {
 //        UIImageWriteToSavedPhotosAlbum(UIView.joinImages([myTextView.image, self.view.image, myTextView.image, self.view.image, myTextView.image, self.view.image]), nil, nil, nil)
         
         println(MPCManager.allPlayers.map({return $0.name}))
+        
+        if let dest = segue.destinationViewController as? DescribingViewController
+        {
+            let uiim: UIImage = self.view.image
+            if let w = self.view as? JCDrawView
+            {
+                dest.describedImage = w.drawImageView
+            }
+        }
     }
     
     private func resetDrawView() {

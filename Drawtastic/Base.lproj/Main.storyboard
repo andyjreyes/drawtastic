@@ -116,22 +116,29 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe the drawing" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-NU-RGO">
-                                <rect key="frame" x="16" y="72" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-18-c1u">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-xb-mFv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Describe the drawing" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-NU-RGO">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LM4-xb-mFv" firstAttribute="leading" secondItem="dIJ-1O-4J8" secondAttribute="leading" id="Ejb-Cs-7e6"/>
                             <constraint firstItem="ihp-NU-RGO" firstAttribute="leading" secondItem="dIJ-1O-4J8" secondAttribute="leadingMargin" id="F6m-PF-9Om"/>
                             <constraint firstItem="ihp-NU-RGO" firstAttribute="top" secondItem="kYe-NR-rtZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Fzd-dc-CCL"/>
+                            <constraint firstItem="LM4-xb-mFv" firstAttribute="centerX" secondItem="ihp-NU-RGO" secondAttribute="centerX" id="XtG-1h-Cvz"/>
                             <constraint firstItem="ihp-NU-RGO" firstAttribute="trailing" secondItem="dIJ-1O-4J8" secondAttribute="trailingMargin" id="fdN-MU-9Qr"/>
+                            <constraint firstItem="LM4-xb-mFv" firstAttribute="centerY" secondItem="2VO-18-c1u" secondAttribute="centerY" id="hAp-8n-kn1"/>
                             <constraint firstItem="2VO-18-c1u" firstAttribute="centerY" secondItem="dIJ-1O-4J8" secondAttribute="centerY" id="i3y-dv-vcf"/>
+                            <constraint firstItem="LM4-xb-mFv" firstAttribute="bottom" secondItem="kbz-yR-S5g" secondAttribute="top" id="lh9-gW-0TF"/>
                             <constraint firstItem="2VO-18-c1u" firstAttribute="centerX" secondItem="ihp-NU-RGO" secondAttribute="centerX" id="og1-yT-6Pv"/>
                         </constraints>
                     </view>
@@ -144,6 +151,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="2VO-18-c1u" id="bt8-WO-6dt"/>
+                        <outlet property="describedImage" destination="LM4-xb-mFv" id="mg0-uy-tUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZx-ON-6xW" userLabel="First Responder" sceneMemberID="firstResponder"/>
