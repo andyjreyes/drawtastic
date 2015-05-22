@@ -34,12 +34,14 @@ struct MPCManager {
         return PeerKit.session?.connectedPeers as! [MCPeerID]? ?? []
     }
     
+    // Player order is always alphabetical order
     static var otherPlayers: [Player] {
         var playerArray: [Player] = peers.map { Player(peerID: $0) }
         playerArray.sort({$0.name < $1.name})
         return playerArray
     }
     
+    // Player order is always alphabetical order
     static var allPlayers: [Player] {
         var playerArray: [Player] = [Player.getMe()] + otherPlayers
         playerArray.sort({$0.name < $1.name})

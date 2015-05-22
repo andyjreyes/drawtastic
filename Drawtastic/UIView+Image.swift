@@ -8,9 +8,9 @@
 
 extension UIView {
     
-    // Any view can now generate an image of itself
+    // Any view can now generate an image of itself!
     var image: UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0 /*UIScreen.mainScreen().scale*/);
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0 /*UIScreen.mainScreen().scale*/);
         self.drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)
         let snapshotImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext();
@@ -34,7 +34,7 @@ extension UIView {
             
         }
         
-        UIGraphicsBeginImageContextWithOptions(totalSize, true, 0 /*UIScreen.mainScreen().scale*/)
+        UIGraphicsBeginImageContextWithOptions(totalSize, false, 0 /*UIScreen.mainScreen().scale*/)
         
         var imagePoint = CGPointZero
         

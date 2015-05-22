@@ -110,6 +110,8 @@
 		A15314761B00C48E00ABE1B2 /* Drawtastic */ = {
 			isa = PBXGroup;
 			children = (
+				A15314A01B049D2700ABE1B2 /* Drawing View */,
+				A1D476EC1B0CCA4900BAA01A /* Extensions */,
 				A16F6E4D1B04C962009B4228 /* MenuViewController.swift */,
 				A153147B1B00C48E00ABE1B2 /* DrawingViewController.swift */,
 				A1D887BC1B0E15F8000E4C6F /* GameViewController.swift */,
@@ -128,8 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				A15314791B00C48E00ABE1B2 /* AppDelegate.swift */,
-				A15314A01B049D2700ABE1B2 /* Drawing View */,
-				A1D476EC1B0CCA4900BAA01A /* Extensions */,
 				A153149A1B00D39C00ABE1B2 /* Drawtastic-Bridging-Header.h */,
 				A15314781B00C48E00ABE1B2 /* Info.plist */,
 				A15314991B00C87700ABE1B2 /* README.md */,

@@ -41,16 +41,14 @@ class DrawingViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         // Test code for stiting image representations of views together. It works!
-//        let myTextView: UITextView = UITextView(frame: CGRectMake(0, 0, 200, 50))
-//        myTextView.text = "This is how we do it! Shalalalala!"
-//        UIImageWriteToSavedPhotosAlbum(self.view.image, nil, nil, nil)
-//        UIImageWriteToSavedPhotosAlbum(UIView.joinImages([myTextView.image, self.view.image, myTextView.image, self.view.image, myTextView.image, self.view.image]), nil, nil, nil)
+        let myTextView: UITextView = UITextView(frame: CGRectMake(0, 0, 250, 50))
+        myTextView.text = "This is an example text that someone wrote!"
+        UIImageWriteToSavedPhotosAlbum(self.view.image, nil, nil, nil)
+        UIImageWriteToSavedPhotosAlbum(UIView.joinImages([myTextView.image, self.view.image, myTextView.image, self.view.image, myTextView.image, self.view.image]), nil, nil, nil)
         
-        println(MPCManager.allPlayers.map({return $0.name}))
-        
+        //TODO: Pass the created image over to the destinationViewController (Doesn't work)
         if let dest = segue.destinationViewController as? DescribingViewController
         {
-            let uiim: UIImage = self.view.image
             if let w = self.view as? JCDrawView
             {
                 dest.describedImage = w.drawImageView
